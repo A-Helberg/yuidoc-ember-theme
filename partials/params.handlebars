@@ -1,0 +1,25 @@
+<div id="param{{name}}" class="property item{{#if deprecated}} deprecated{{/if}}">
+  <h3 class="name" id="{{name}}">
+    {{#if optional}}
+        <code class="optional">{{name}}{{#if optdefault}}={{optdefault}}{{/if}}</code>
+    {{else}}
+      <code>{{name}}</code>
+    {{/if}}
+  </h3>
+
+  <span class="type">{{#crossLink type}}{{type}}{{/crossLink}}</span>
+
+  {{#if deprecated}}
+    <span
+      class="flag deprecated"
+      {{#if deprecationMessage}}
+        title="{{deprecationMessage}}"
+      {{/if}}>
+      deprecated
+    </span>
+  {{/if}}
+
+  <div class="description">
+      {{{description}}}
+  </div>
+</div>

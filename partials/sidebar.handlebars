@@ -74,4 +74,25 @@
             </div>
         </div>
     </li>
+
+    <li class="panel panel-default">
+        <div class="panel-heading" role="tab" id="sidebar-classes-heading">
+            <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" href="#sidebar-classes" aria-expanded="true" aria-controls="collapseOne">
+            Elements
+          </a>
+        </h4>
+        </div>
+        <div id="sidebar-classes" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="sidebar-classes-heading">
+            <div class="panel-body">
+                <ol>
+                    {{#elements}}
+                        <li>
+                            <a href="{{../projectRoot}}elements/{{name}}.html">{{displayName}}</a>
+                        </li>
+                    {{/elements}}
+                </ol>
+            </div>
+        </div>
+    </li>
 </ol>
